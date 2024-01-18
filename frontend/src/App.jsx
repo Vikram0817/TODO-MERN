@@ -94,12 +94,12 @@ function App() {
               addTask={addTask}
             ></TaskInputs>
             
-          <userContext.Provider value={{username, password}}>
-            <Tasks
-              taskDetails={taskDetails}
-              setTaskDetails={setTaskDetails}
-            ></Tasks>
-          </userContext.Provider>
+            <userContext.Provider value={{username, password}}>  
+              <Tasks
+                taskDetails={taskDetails}
+                setTaskDetails={setTaskDetails}
+              ></Tasks>
+            </userContext.Provider>
           </>
         }>
         </Route>

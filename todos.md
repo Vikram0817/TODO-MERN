@@ -7,7 +7,7 @@
     - delete task using context api
 
 - Todos
-    - update Tasks
+    - update Tasks (make a button which converts task to input and can save it as)
     - use Hooks AMAP
     - css
   

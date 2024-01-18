@@ -70,7 +70,7 @@ app.put("/edittask", authenticateUser, async (req, res) => {
         done: false
     }
     
-    Users.updateOne({username, password}, {
+    await Users.updateOne({username, password}, {
         $set: {
             taskDetails: taskDetails
         }
@@ -80,7 +80,6 @@ app.put("/edittask", authenticateUser, async (req, res) => {
 })
 
 app.delete("/deletetask", authenticateUser, async (req, res) => {
-    // try {
         const { username, password } = req.headers;
         const { task } = req.body;
         const user = await Users.findOne({ username, password });
@@ -99,10 +98,6 @@ app.delete("/deletetask", authenticateUser, async (req, res) => {
         } else {
             res.json({ msg: "Task not found" });
         }
-    // } catch (error) {
-    //     console.error(error);
-    //     res.status(500).json({ msg: "Internal Server Error" });
-    // }
 })
 
 app.listen(PORT, () => {
