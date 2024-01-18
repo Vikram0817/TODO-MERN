@@ -37,7 +37,7 @@ export default function Tasks({taskDetails, setTaskDetails}) {
     }
 
     return(
-      <>
+      <div className="tasks">
         {taskDetails.map(({task, detail, done}) => {
           return (
             <>
@@ -51,12 +51,12 @@ export default function Tasks({taskDetails, setTaskDetails}) {
               ></Task>
             </>
           )})}
-            {isModalVisisble && 
-              <EditTaskModel 
-                setModalVisible={setModalVisible}
-                task={taskToUpdate}
-                setTaskDetails={setTaskDetails}
-              ></EditTaskModel>}
-      </>
+        {isModalVisisble && 
+          <EditTaskModel 
+            setModalVisible={setModalVisible}
+            task={taskToUpdate}
+            setTaskDetails={setTaskDetails}
+          ></EditTaskModel>}
+      </div>
       )
 }

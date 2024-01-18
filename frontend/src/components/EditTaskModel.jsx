@@ -51,10 +51,10 @@ export default function EditTaskModel({setModalVisible, task, setTaskDetails}){
     }
     
     return(
-        <>
-            <input type="text" placeholder="task" value={updatedTask} onChange={e => setUpdatedTask(e.target.value)}/>
-            <input type="text" placeholder="detial" value={updatedDetail} onChange={e => setUpdatedDetail(e.target.value)}/>
-            <button onClick={updateTask}>Done</button>
-        </>
+        <div className="update-container">
+            <input className="update-task" type="text" placeholder="Task" value={updatedTask} onChange={e => setUpdatedTask(e.target.value)}/>
+            <input className="update-task" type="text" placeholder="Detial" value={updatedDetail} onChange={e => setUpdatedDetail(e.target.value)}/>
+            <button className="update-btn" onClick={updateTask}>Done</button>
+        </div>
     )
 }

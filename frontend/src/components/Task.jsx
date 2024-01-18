@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { userContext } from "../context";
 
 export default function Task({task, detail, done, handleEdit, setTaskDetails}){
@@ -35,7 +35,7 @@ export default function Task({task, detail, done, handleEdit, setTaskDetails}){
         <div className="task">
             <h3>{task}</h3>
             <p>{detail}</p>
-            <button onClick={handleDelete}>{!done ? "mark as complete" : ""}</button>
+            <button onClick={handleDelete}>{!done ? "Mark as Complete" : ""}</button>
             <button onClick={() => handleEdit(task)}>Edit Task</button>
         </div>
     )

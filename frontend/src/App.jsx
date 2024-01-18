@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import TaskInputs from './components/TaskInputs';
 import Signin from './components/Signup';
 import Login from './components/Login';
@@ -45,7 +45,7 @@ function App() {
         detail: detail,
         done: false
       }])
-      
+
       return res.json();
     })
     .then(data => console.log(data))

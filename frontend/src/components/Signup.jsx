@@ -29,10 +29,10 @@ export default function Signin({username, password, handleUsername, handlePasswo
         })
     }
     return(
-        <>
-            <input type="text" value={username} onChange={e => handleUsername(e.target.value)}/>
-            <input type="text" value={password} onChange={e => handlePassword(e.target.value)}/>
-            <button onClick={handleSignin}>Signin</button>
-        </>
+        <div className="cred-container">
+            <input className="user-input" type="text" value={username} onChange={e => handleUsername(e.target.value)}/>
+            <input className="user-input" type="text" value={password} onChange={e => handlePassword(e.target.value)}/>
+            <button className="credentails-btn" onClick={handleSignin}>Signin</button>
+        </div>
     )
 }

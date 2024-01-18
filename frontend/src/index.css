@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.cred-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.user-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.credentails-btn {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.credentails-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Main screen */
+/* Add some styles to your task input component */
+
+.task-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.task-input {
+    padding: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.task-input:focus {
+    border-color: #e74c3c;
+}
+
+.add-task-btn {
+    background-color: #f9ca24;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+    background-color: #f0bc01;
+}
+
+.tasks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Task */
+.task {
+    background-color: #f9ca24;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 30vh;
+}
+
+.task * {
+    margin: 3px;
+}
+
+.task h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50; 
+}
+
+.task p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+.task button {
+    background-color: #e74c3c; /* Red color for buttons */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.task button:hover {
+    background-color: #c0392b; /* Darker red color on hover */
+}
+
+.update-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    height: 100%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.update-task {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.update-btn {
+    background-color: #4caf50; /* Green color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.update-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
