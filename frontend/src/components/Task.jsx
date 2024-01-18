@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { userContext } from "../context";
 
-export default function Task({task, detail, done, handleEdit}){
+export default function Task({task, detail, done, handleEdit, setTaskDetails}){
 
     const {username, password} = useContext(userContext);
 
@@ -24,6 +24,7 @@ export default function Task({task, detail, done, handleEdit}){
             if(!res.ok){
                 throw new Error("HTTP error! status " + res.ok) 
             }
+            setTaskDetails(prevVal => prevVal.filter(taskDetail => taskDetail.task != task)); // for re-rendering
             return res.json();
         })
         .then((data) => alert(data.msg)) 

@@ -5,9 +5,9 @@
     - connect to backend - GPP
     - authentication (what is the point of doing it like this??)
     - delete task using context api
-
+    - update Tasks 
+    - make it rerender
+    
 - Todos
-    - update Tasks (make a button which converts task to input and can save it as)
-    - use Hooks AMAP
     - css
   

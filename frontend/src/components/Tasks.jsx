@@ -47,6 +47,7 @@ export default function Tasks({taskDetails, setTaskDetails}) {
                 detail={detail} 
                 done={done}
                 handleEdit={handleEdit}
+                setTaskDetails={setTaskDetails}
               ></Task>
             </>
           )})}
@@ -54,6 +55,7 @@ export default function Tasks({taskDetails, setTaskDetails}) {
               <EditTaskModel 
                 setModalVisible={setModalVisible}
                 task={taskToUpdate}
+                setTaskDetails={setTaskDetails}
               ></EditTaskModel>}
       </>
       )

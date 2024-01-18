@@ -21,16 +21,6 @@ function App() {
   const token = localStorage.getItem("myToken");
 
   function addTask(){
-    
-    setTaskDetails(prevVal => [ // adding new tasks to state locally, which is used to render data on UI
-      ...prevVal,
-      {
-        task: task,
-        detail: detail,
-        done: false
-      }
-    ])
-
     fetch("http://localhost:3000/addtask", {  // adding task to DB which are fetched only when site loads for the first time
       method: "PUT",
       body: JSON.stringify({
@@ -49,6 +39,13 @@ function App() {
       if(!res.ok){
         throw new Error("HTTP error status " + res.ok)
       }
+      setTaskDetails(prevVal => [ // adding new tasks to state locally, which is used to render data on UI
+      ...prevVal, {
+        task: task,
+        detail: detail,
+        done: false
+      }])
+      
       return res.json();
     })
     .then(data => console.log(data))
