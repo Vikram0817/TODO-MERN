@@ -5,6 +5,7 @@ import Login from './components/Login';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Tasks from './components/Tasks';
 import { userContext } from "./context";
+import { Home } from './components/Home';
 
 function App() {
   const [username, setUsername] = useState("");
@@ -63,8 +64,15 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
+        <Route
+          path="/"
+          element={
+            <Home />
+          }
+        >
+        </Route>
         <Route 
-          path="signup" 
+          path="/signup" 
           element={<Signin 
             username={username}
             password={password}
@@ -73,7 +81,7 @@ function App() {
           />} 
         />
         <Route 
-          path="login" 
+          path="/login" 
           element={<Login 
             username={username}
             password={password}
@@ -82,7 +90,7 @@ function App() {
           />} 
         />
         <Route path="/tasks" element={
-          <>
+          <div className='task-app'>
             <TaskInputs 
               task={task} 
               detail={detail} 
@@ -97,11 +105,15 @@ function App() {
                 setTaskDetails={setTaskDetails}
               ></Tasks>
             </userContext.Provider>
-          </>
+          </div>
         }>
         </Route>
       </Routes>
     </BrowserRouter>
+    <div id='filler'></div>
+    <footer className="footer">
+        <p>&copy; 2024 Todo App. All rights reserved.</p>
+    </footer>
     </>
   )
 }

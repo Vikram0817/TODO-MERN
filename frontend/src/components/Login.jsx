@@ -30,8 +30,9 @@ export default function Login({username, password, handleUsername, handlePasswor
     }
     return(
         <div className="cred-container">
-            <input className="user-input" type="text" value={username} onChange={e => handleUsername(e.target.value)}/>
-            <input className="user-input" type="text" value={password} onChange={e => handlePassword(e.target.value)}/>
+            <h1>Login User</h1>
+            <input className="user-input" type="text" placeholder="Username" value={username} onChange={e => handleUsername(e.target.value)}/>
+            <input className="user-input" type="text" placeholder="Password" value={password} onChange={e => handlePassword(e.target.value)}/>
             <button className="credentails-btn" onClick={handleLogin}>Login</button>
         </div>
     )
