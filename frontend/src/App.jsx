@@ -90,27 +90,30 @@ function App() {
           />} 
         />
         <Route path="/tasks" element={
-          <div className='task-app'>
-            <TaskInputs 
-              task={task} 
-              detail={detail} 
-              setTask={setTask} 
-              setDetail={setDetail} 
-              addTask={addTask}
-            ></TaskInputs>
-            
-            <userContext.Provider value={{username, password}}>  
-              <Tasks
-                taskDetails={taskDetails}
-                setTaskDetails={setTaskDetails}
-              ></Tasks>
-            </userContext.Provider>
-          </div>
+          <>
+            <div className='task-app'>
+              <TaskInputs 
+                task={task} 
+                detail={detail} 
+                setTask={setTask} 
+                setDetail={setDetail} 
+                addTask={addTask}
+              ></TaskInputs>
+              
+              <userContext.Provider value={{username, password}}>  
+                <Tasks
+                  taskDetails={taskDetails}
+                  setTaskDetails={setTaskDetails}
+                ></Tasks>
+              </userContext.Provider>
+            </div>
+
+            <div id='filler'></div>
+          </>
         }>
         </Route>
       </Routes>
     </BrowserRouter>
-    <div id='filler'></div>
     <footer className="footer">
         <p>&copy; 2024 Todo App. All rights reserved.</p>
     </footer>
